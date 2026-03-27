@@ -5,11 +5,9 @@ import org.bukkit.entity.Player;
 
 public class SoundManager {
     private final ArisChatHover plugin;
-
     public SoundManager(ArisChatHover plugin) {
         this.plugin = plugin;
     }
-
     public void playSound(Player player, String configPath) {
         String soundName = plugin.getConfig().getString("sounds." + configPath);
         if (soundName == null || soundName.isEmpty()) return;
