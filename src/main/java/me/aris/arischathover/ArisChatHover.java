@@ -125,9 +125,9 @@ public class ArisChatHover extends JavaPlugin implements Listener, CommandExecut
         event.setCancelled(true);
         String statsRaw = PlaceholderAPI.setPlaceholders(p, String.join("\n", getConfig().getStringList("stats")).replace("{player}", p.getName()));
         Component hover = HEX_SERIALIZER.deserialize(statsRaw);
-        String nameRank = PlaceholderAPI.setPlaceholders(p, "%luckperms_prefix%" + p.getName() + "%luckperms_suffix%");
-        Component finalComp = HEX_SERIALIZER.deserialize(PlaceholderAPI.setPlaceholders(p, getConfig().getString("chat-format")))
-                .replaceText(TextReplacementConfig.builder().match("\\{name\\}").replacement(HEX_SERIALIZER.deserialize(nameRank)).build())
+        String format = PlaceholderAPI.setPlaceholders(p, getConfig().getString("chat-format"));
+        Component finalComp = HEX_SERIALIZER.deserialize(format)
+                .replaceText(TextReplacementConfig.builder().match("\\{name\\}").replacement(p.getName()).build())
                 .replaceText(TextReplacementConfig.builder().match("\\{message\\}").replacement(HEX_SERIALIZER.deserialize(msgRaw)).build())
                 .hoverEvent(HoverEvent.showText(hover))
                 .clickEvent(ClickEvent.suggestCommand("/msg " + p.getName() + " "));
@@ -162,4 +162,4 @@ public class ArisChatHover extends JavaPlugin implements Listener, CommandExecut
         if (getConfig().getBoolean("anti-spam-chat")) p.sendMessage(c);
         if (getConfig().getBoolean("anti-spam-actionbar")) p.sendActionBar(c);
     }
-  }
+    }
