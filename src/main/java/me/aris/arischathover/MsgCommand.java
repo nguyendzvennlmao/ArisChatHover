@@ -10,11 +10,9 @@ import java.util.Arrays;
 
 public class MsgCommand implements CommandExecutor {
     private final ArisChatHover plugin;
-
     public MsgCommand(ArisChatHover plugin) {
         this.plugin = plugin;
     }
-
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if (!(sender instanceof Player p)) return true;
@@ -56,7 +54,6 @@ public class MsgCommand implements CommandExecutor {
         }
         return true;
     }
-
     private void sendToggleStatus(Player p, String raw, String configKey) {
         if (plugin.getConfig().getBoolean(configKey + ".chat")) {
             p.sendMessage(ArisChatHover.HEX_SERIALIZER.deserialize(raw));
@@ -65,4 +62,4 @@ public class MsgCommand implements CommandExecutor {
             p.sendActionBar(ArisChatHover.HEX_SERIALIZER.deserialize(raw));
         }
     }
-            }
+                    }
