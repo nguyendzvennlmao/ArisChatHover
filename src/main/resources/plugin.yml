@@ -1,0 +1,16 @@
+name: ArisChatHover
+version: 1.0
+main: me.aris.arischathover.ArisChatHover
+api-version: '1.20'
+author: VennLMAO
+depend: [PlaceholderAPI, LuckPerms]
+folia-supported: true
+commands:
+  arischat:
+    permission: arischat.admin
+  msg:
+    aliases: [tell, w, m]
+  msgtoggle:
+    description: Bật/Tắt nhận tin nhắn riêng
+  chattoggle:
+    description: Bật/Tắt chat toàn server
