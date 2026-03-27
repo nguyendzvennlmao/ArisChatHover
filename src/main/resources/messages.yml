@@ -1,0 +1,18 @@
+anti-spam-message: "&#ff0812⚠ &#facc15Bạn không thể gửi tin nhắn giống nhau! Vui lòng chờ {time}s."
+rate-limit-message: "&#ff0812⚠ &#facc15Bạn gửi tin nhắn quá nhanh! Vui lòng chậm lại, chờ {time}s."
+no-permission: "&#ff0812⚠ Bạn không có quyền thực hiện lệnh này."
+reload-success: "&#00FC00✔ Đã tải lại cấu hình thành công!"
+player-not-found: "&#ff0812⚠ Không tìm thấy người chơi."
+
+msg-to: "&#facc15bạn > {player}: &r{message}"
+msg-from: "&#facc15{player} > bạn: &r{message}"
+status-sent: "&#facc15Bạn đã gửi tin nhắn riêng cho {player}"
+status-received: "&#facc15{player} đã gửi tin nhắn riêng cho bạn"
+
+msg-off: "&#ff0812Tin nhắn riêng đã tắt"
+msg-on: "&aTin nhắn riêng đã bật"
+msg-target-off: "&#ff0812Người chơi này đã tắt nhận tin nhắn riêng."
+
+chat-off: "&#ff0812Chat đã tắt"
+chat-on: "&aChat đã bật"
+chat-is-muted: "&#ff0812Hiện tại chat đang bị khóa."
