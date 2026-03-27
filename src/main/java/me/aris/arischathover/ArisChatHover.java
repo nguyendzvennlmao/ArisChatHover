@@ -16,6 +16,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 
@@ -77,6 +79,24 @@ public class ArisChatHover extends JavaPlugin implements Listener, CommandExecut
             return true;
         }
         return false;
+    }
+
+    @EventHandler
+    public void onJoin(PlayerJoinEvent event) {
+        Player p = event.getPlayer();
+        if (getConfig().getBoolean("join-quit.enabled")) {
+            String msg = getConfig().getString("join-quit.join-message").replace("{player}", p.getName());
+            event.joinMessage(HEX_SERIALIZER.deserialize(PlaceholderAPI.setPlaceholders(p, msg)));
+        }
+    }
+
+    @EventHandler
+    public void onQuit(PlayerQuitEvent event) {
+        Player p = event.getPlayer();
+        if (getConfig().getBoolean("join-quit.enabled")) {
+            String msg = getConfig().getString("join-quit.quit-message").replace("{player}", p.getName());
+            event.quitMessage(HEX_SERIALIZER.deserialize(PlaceholderAPI.setPlaceholders(p, msg)));
+        }
     }
 
     @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
