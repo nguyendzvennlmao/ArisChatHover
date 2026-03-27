@@ -1,0 +1,43 @@
+small-caps: true
+
+mention-color: "&#facc15"
+
+sounds:
+  msg-received: "ENTITY_VILLAGER_YES"
+  msg-error: "ENTITY_VILLAGER_NO"
+  spam-error: "ENTITY_VILLAGER_NO"
+  ratelimit-error: "ENTITY_VILLAGER_NO"
+
+msg-settings:
+  chat: true
+  actionbar: true
+
+chat-toggle:
+  chat: true
+  actionbar: true
+
+msg-toggle:
+  chat: true
+  actionbar: true
+
+antispam: true
+anti-spam-chat: true
+anti-spam-actionbar: true
+
+ratelimit:
+  enabled: true
+  max-messages: 5
+  time-window-seconds: 1
+  cooldown-seconds: 5
+
+chat-format: "%luckperms_prefix%{name}#C8CFDC: #C8CFDC{message}"
+stats:
+  - "&7%luckperms_prefix%{player}"
+  - "&7&m----------"
+  - "#00FC00&l$ &fᴍᴏɴᴇʏ #00FC00%nf_###E0X_vault_eco_balance%"
+  - "#A303F9★ &fsʜᴀʀᴅ #A303F9%nf_###E0X_donutcratecore_shards%"
+  - "#FC0000🗡 &fᴋ/ᴅ #FC0000%nf_###E0X_statistic_player_kills% &7/ #F97603%nf_###E0X_statistic_deaths%"
+  - "#F97603🏹 &fᴛɪᴇʀ %luckperms_suffix%"
+  - "&#00A4FC⌛ &fᴛɪᴍᴇ &#00A4FC%statistic_hours_played%h %statistic_time_played:minutes%m"
+  - "&7&m----------"
+  - "&7Click to view msg."
