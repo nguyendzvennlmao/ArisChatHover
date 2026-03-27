@@ -62,4 +62,4 @@ public class MsgCommand implements CommandExecutor {
             p.sendActionBar(ArisChatHover.HEX_SERIALIZER.deserialize(raw));
         }
     }
-                    }
+    }
